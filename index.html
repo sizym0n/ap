@@ -4,14 +4,63 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>ESign Installer</title>
-  <meta http-equiv="refresh"
-        content="0;url=itms-services://?action=download-manifest&url=https%3A%2F%2Fapplejr.net%2Fpost%2FB8BGPMF2XK_APPLEJR_0511ce97.plist">
+  <style>
+    body {
+      margin: 0;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #111;
+      color: white;
+      font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+    }
+    .box {
+      width: 85%;
+      max-width: 400px;
+      text-align: center;
+      background: #1c1c1e;
+      padding: 30px;
+      border-radius: 22px;
+    }
+    h1 {
+      margin-bottom: 5px;
+    }
+    p {
+      color: #aaa;
+    }
+    a {
+      display: block;
+      padding: 16px;
+      margin-top: 15px;
+      border-radius: 14px;
+      text-decoration: none;
+      font-weight: 600;
+      color: white;
+    }
+    .install {
+      background: #007aff;
+    }
+    .download {
+      background: #333;
+    }
+  </style>
 </head>
 <body>
-  <h2>Installing ESign...</h2>
-  <p>If nothing happens, tap below:</p>
-  <a href="itms-services://?action=download-manifest&url=https%3A%2F%2Fapplejr.net%2Fpost%2FB8BGPMF2XK_APPLEJR_0511ce97.plist">
-    Install ESign
-  </a>
+  <div class="box">
+    <h1>ESign</h1>
+    <p>HSBC Bank variant</p>
+    <!-- Install as an app -->
+    <a class="install"
+       href="itms-services://?action=download-manifest&url=https%3A%2F%2Fapplejr.net%2Fpost%2FB8BGPMF2XK_APPLEJR_0511ce97.plist">
+       Install as App
+    </a>
+    <!-- Download IPA -->
+    <a class="download"
+       href="https://applejr.ipadownloads.com/signed/panel/b8bgpmf2xk_applejr-93d4898e.ipa"
+       download>
+       Save IPA to Files
+    </a>
+  </div>
 </body>
 </html>
