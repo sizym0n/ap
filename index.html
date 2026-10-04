@@ -3,64 +3,107 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ESign Installer</title>
+  <title>ESign • DNS HSBC</title>
   <style>
+    * {
+      box-sizing: border-box;
+    }
     body {
       margin: 0;
       min-height: 100vh;
       display: flex;
       align-items: center;
       justify-content: center;
-      background: #111;
+      padding: 20px;
+      background: #0f1115;
       color: white;
-      font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+      font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display",
+                   "SF Pro Text", Arial, sans-serif;
     }
-    .box {
-      width: 85%;
-      max-width: 400px;
+    .card {
+      width: 100%;
+      max-width: 420px;
+      padding: 30px 22px;
+      border-radius: 24px;
+      background: #191c22;
       text-align: center;
-      background: #1c1c1e;
-      padding: 30px;
-      border-radius: 22px;
+      box-shadow: 0 15px 45px rgba(0, 0, 0, 0.35);
+    }
+    .icon {
+      width: 82px;
+      height: 82px;
+      margin: 0 auto 18px;
+      border-radius: 20px;
+      background: #252a33;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 42px;
     }
     h1 {
-      margin-bottom: 5px;
+      margin: 0;
+      font-size: 27px;
+      font-weight: 700;
     }
-    p {
-      color: #aaa;
+    .subtitle {
+      margin: 8px 0 26px;
+      color: #aeb4c0;
+      font-size: 15px;
     }
-    a {
+    .button {
       display: block;
+      width: 100%;
       padding: 16px;
-      margin-top: 15px;
+      margin-top: 12px;
       border-radius: 14px;
       text-decoration: none;
+      font-size: 16px;
       font-weight: 600;
-      color: white;
+      transition: opacity 0.15s ease;
+    }
+    .button:active {
+      opacity: 0.7;
     }
     .install {
       background: #007aff;
+      color: white;
     }
     .download {
-      background: #333;
+      background: #292e38;
+      color: white;
+    }
+    .note {
+      margin-top: 22px;
+      color: #858c99;
+      font-size: 12px;
+      line-height: 1.5;
     }
   </style>
 </head>
 <body>
-  <div class="box">
+  <div class="card">
+    <div class="icon">✍️</div>
     <h1>ESign</h1>
-    <p>HSBC Bank variant</p>
-    <!-- Install as an app -->
-    <a class="install"
-       href="itms-services://?action=download-manifest&url=https%3A%2F%2Fapplejr.net%2Fpost%2FB8BGPMF2XK_APPLEJR_0511ce97.plist">
-       Install as App
+    <div class="subtitle">
+      DNS • HSBC Bank
+    </div>
+    <!-- EXACT AppleJr HSBC installation URL -->
+    <a
+      class="button install"
+      href="itms-services://?action=download-manifest&url=https%3A%2F%2Fapplejr.net%2Fpost%2FB8BGPMF2XK_APPLEJR_0511ce97.plist">
+      Install ESign
     </a>
-    <!-- Download IPA -->
-    <a class="download"
-       href="https://applejr.ipadownloads.com/signed/panel/b8bgpmf2xk_applejr-93d4898e.ipa"
-       download>
-       Save IPA to Files
+    <!-- Direct IPA -->
+    <a
+      class="button download"
+      href="https://applejr.ipadownloads.com/signed/panel/b8bgpmf2xk_applejr-93d4898e.ipa"
+      download>
+      Save IPA to Files
     </a>
+    <div class="note">
+      The Install button uses the same AppleJr installation
+      manifest as the original HSBC installation page.
+    </div>
   </div>
 </body>
 </html>
